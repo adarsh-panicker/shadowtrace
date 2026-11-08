@@ -72,12 +72,40 @@ Unlike superficial scanners:
 
 ---
 
+## 🧑‍⚖️ Testing Guide for Judges
+
+ShadowTrace has been designed with **two flexible testing options** so judges can evaluate it effortlessly regardless of setup:
+
+### Option A: Frictionless Zero-Config Mode (No API Keys Needed)
+1. Launch the app using `npm run dev` and open `http://localhost:3000`.
+2. Click **"Preset 1: Developer Persona"** or **"Preset 2: Web3 Persona"** (or keep the default `@johndoe_dev`).
+3. Click **"Instant Demo Profile"** or **"Run Deep Recon Audit"**.
+4. The system immediately simulates real OSINT findings with 100% click-testable receipts, category filters, the dynamic Exposure Gauge, and the 1-Click GDPR/CCPA Takedown Generator.
+
+### Option B: Live Neural Web Search (Exa & Tavily)
+Judges can test live queries with real search engines:
+- **Direct in UI**: Click the **"Custom Exa / Tavily Keys"** button in the header and paste your keys into the drawer.
+- **Or via Environment Variables**: Add `EXA_API_KEY` and `TAVILY_API_KEY` to a `.env.local` file.
+- When keys are active, clicking **"Run Deep Recon Audit"** launches live parallel queries to Exa's neural intent endpoint and Tavily's deep extract engine.
+
+---
+
+### 🔎 Transparency: Real Functionality vs. Simulated
+In adherence to Hack1984 rules regarding transparency:
+- **Core Engine & Synthesis**: Fully real and functional via Next.js API Routes (`/api/audit`).
+- **Live Search**: When Exa and Tavily API keys are supplied, real-time live web queries are performed.
+- **Verifiable Citations**: Every finding produces direct URLs and quotes that can be inspected and verified.
+- **Takedown Generator**: Fully real. Formulates statutory GDPR Art. 17 / CCPA erasure requests and launches the user's native email client with pre-filled DPO addresses.
+- **Mock Mode**: Pre-computed realistic OSINT scenarios are included as an automatic graceful fallback when no API keys are provided or when hitting rate limits.
+
+---
+
 ## ⚡ Quick Start
 
 ### 1. Clone & Install
 \`\`\`bash
-git clone https://github.com/adarshpanicker/hack1984-shadowtrace.git
-cd hack1984-shadowtrace
+git clone https://github.com/adarsh-panicker/shadowtrace.git
+cd shadowtrace
 npm install
 \`\`\`
 
