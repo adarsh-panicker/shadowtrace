@@ -103,15 +103,6 @@ npm start
 
 ---
 
-## 🎥 Hackathon Demo Script (for 2-minute video)
-1. **The Hook (0:00 - 0:25)**: Introduce ShadowTrace and why privacy matters in 1984-style mass data surveillance. Show the sleek cyberpunk UI and radar logo.
-2. **Recon Audit (0:25 - 0:50)**: Enter a target username (e.g. `@alex_rivers_security` or `@adarsh_dev`) and trigger **Deep Recon**. Watch parallel Exa and Tavily search agents discover ghost accounts and exposed repos.
-3. **Receipt Verification (0:50 - 1:20)**: Show the **Exposure Index** and click a **Source Receipt** link to demonstrate that the citations are real, verifiable, and not hallucinated.
-4. **Actionable Takedown (1:20 - 1:45)**: Click **1-Click Takedown** on a data broker card. Show the automatically formulated GDPR/CCPA erasure request and click "Open in Mail Client".
-5. **Closing (1:45 - 2:00)**: Highlight the Markdown export, summarize the mission of putting people first, and credit the creator: **Adarsh Panicker**.
-
----
-
 <div align="center">
   <sub>ShadowTrace is an open-source privacy engineering project by <strong>Adarsh Panicker</strong> for <strong>Hack1984</strong>.</sub>
 </div>
