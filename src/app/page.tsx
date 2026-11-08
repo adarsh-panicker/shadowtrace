@@ -37,6 +37,15 @@ export default function Home() {
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [selectedTakedownItem, setSelectedTakedownItem] = useState<ExposureItem | null>(null);
 
+  const resetToHome = () => {
+    setReport(null);
+    setHandle('johndoe_dev');
+    setName('John Doe');
+    setEmail('johndoe.code@gmail.com');
+    setDomain('');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const runAudit = async (forceDemo: boolean = false) => {
     if (!handle.trim()) return;
 
@@ -124,11 +133,15 @@ ${r.steps.map(s => `- ${s}`).join('\n')}
       {/* Top Banner Navigation */}
       <header className="sticky top-0 z-40 w-full border-b border-gray-800/80 bg-[#070b12]/90 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <button 
+            onClick={resetToHome}
+            className="flex items-center gap-3 text-left hover:opacity-90 transition-opacity focus:outline-none group cursor-pointer"
+            title="Reset & Return to Home"
+          >
             <ShadowTraceLogo size={36} />
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-extrabold text-lg tracking-tight bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-400 bg-clip-text text-transparent">
+                <span className="font-extrabold text-lg tracking-tight bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-400 bg-clip-text text-transparent group-hover:from-blue-300 group-hover:to-cyan-300 transition-all">
                   ShadowTrace
                 </span>
                 <span className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30">
@@ -137,7 +150,7 @@ ${r.steps.map(s => `- ${s}`).join('\n')}
               </div>
               <p className="text-[11px] text-gray-400">Personal Footprint & Doxxing Audit Agent</p>
             </div>
-          </div>
+          </button>
 
           <div className="flex items-center gap-3">
             <button
@@ -465,11 +478,15 @@ ${r.steps.map(s => `- ${s}`).join('\n')}
       {/* Footer & Contest Attribution */}
       <footer className="mt-auto border-t border-gray-800/80 bg-[#060910] py-6 px-4 sm:px-6 lg:px-8 text-xs text-gray-400">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
+          <button 
+            onClick={resetToHome}
+            className="flex items-center gap-2 text-left hover:opacity-80 transition cursor-pointer"
+            title="Reset & Return to Home"
+          >
             <ShadowTraceLogo size={24} />
             <span className="font-semibold text-gray-200">ShadowTrace</span>
             <span>• Built for <strong>Hack1984</strong> (Northeastern University)</span>
-          </div>
+          </button>
 
           <div className="flex items-center gap-3">
             <span className="text-gray-300">
