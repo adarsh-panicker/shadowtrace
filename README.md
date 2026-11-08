@@ -12,6 +12,23 @@
 
 ---
 
+## 📸 Application Preview & Screenshots
+
+<div align="center">
+  <h4>1. Recon Target Audit Input & Persona Selection</h4>
+  <img src="screenshots/01-landing-page.png" alt="ShadowTrace Landing & Audit Config" width="90%" />
+
+  <br/><br/>
+  <h4>2. Live Exposure Gauge & Verifiable Citation Cards (Surge Track)</h4>
+  <img src="screenshots/02-audit-results.png" alt="ShadowTrace Audit Results & Verifiable Citations" width="90%" />
+
+  <br/><br/>
+  <h4>3. 1-Click GDPR Art. 17 / CCPA Legal Takedown Generator</h4>
+  <img src="screenshots/03-takedown-modal.png" alt="ShadowTrace Legal Takedown Modal" width="80%" />
+</div>
+
+---
+
 ## 💡 The Core Problem
 Most internet users believe their digital exposure is limited to their active social media profiles. In reality, bad actors, employers, and OSINT doxxers correlate your identity using:
 1. **Ghost Accounts**: Legacy forum accounts from 2018–2021 with matching usernames, unhashed credentials, or forgotten biographies.
